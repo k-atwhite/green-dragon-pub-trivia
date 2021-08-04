@@ -1,5 +1,5 @@
 import React from "react";
-import ".Card.css";
+import "./Card.css";
 
 const Card = ({ name, race, wikiUrl, gender, realm, birthday, key }) => {
   return (

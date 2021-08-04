@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Characters from "./Characters";
+import Characters from "../Characters/Characters";
 import "./App.css";
 import { fetchAllCharacters } from "../../apiCalls.js";
 
-class App extends Components {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +12,7 @@ class App extends Components {
     };
   }
 
-  displayCharacters = () => {
+  componentDidMount = () => {
     fetchAllCharacters()
       .then((data) => this.setState({ characters: data.docs }))
       .catch(() =>
@@ -25,7 +25,7 @@ class App extends Components {
   render() {
     return (
       <main>
-        <h1>Those of Middle Earth</h1>
+        <h1>Third Age Heroes</h1>
         <Characters characters={this.state.characters} />
       </main>
     );
