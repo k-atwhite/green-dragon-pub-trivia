@@ -1,4 +1,4 @@
-<h1 align="center"> 🐉 Welcome to the Green Dragon pub trivia, 🐉 </h1>
+<h1 align="center"> 🐉 Welcome to Green Dragon pub trivia night! 🐉 </h1>
 
 <p align="center">Pull up a chair and see how well you know the words of our great heroes</p>
 
