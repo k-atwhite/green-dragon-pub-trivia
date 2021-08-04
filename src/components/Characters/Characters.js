@@ -6,7 +6,8 @@ const Characters = ({ characters }) => {
   const characterCards = characters.map((character) => {
     return (
       <Card
-        key={character.id}
+        key={character._id}
+        id={character._id}
         name={character.name}
         race={character.race}
         gender={character.gender}
