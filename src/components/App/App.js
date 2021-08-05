@@ -8,6 +8,8 @@ class App extends Component {
     super(props);
     this.state = {
       characters: [],
+      quote: "",
+      choices: [],
       error: "",
     };
   }
@@ -33,3 +35,24 @@ class App extends Component {
 }
 
 export default App;
+
+/* Main characters:
+Frodo
+Gandalf
+Aragorn
+Legolas
+Arwen
+Galadriel
+Gimli
+Boromir
+BIlbo
+Sam
+Gollum 
+Saruman
+Pippin
+Merry
+Elrond
+Theoden
+Faramir
+Eowyn
+*/
