@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import Characters from "../Characters/Characters";
+import Quote from "../Quote/Quote";
 import "./App.css";
-import { fetchAllCharacters } from "../../apiCalls.js";
+import { getMainCharacters } from "../../apiCalls.js";
+import { getQuote } from "../../apiCalls.js";
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    fetchAllCharacters()
+    getMainCharacters()
       .then((data) => this.setState({ characters: data.docs }))
       .catch(() =>
         this.setState({
@@ -24,11 +26,16 @@ class App extends Component {
       );
   };
 
+  chooseRandomCharacter = () => {
+    let randomNum = Math.floor(Math.random() * 19);
+  };
+
   render() {
     return (
       <main>
-        <h1>Third Age Heroes</h1>
-        <Characters characters={this.state.characters} />
+        <h1>Who Said...?</h1>
+        {/* <Characters characters={this.state.characters} /> */}
+        <Quote quote={this.state.quote} />
       </main>
     );
   }
