@@ -8,6 +8,8 @@ class App extends Component {
     super(props);
     this.state = {
       characters: [],
+      quote: "",
+      choices: [],
       error: "",
     };
   }
