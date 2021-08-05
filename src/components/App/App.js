@@ -25,10 +25,8 @@ class App extends Component {
   render() {
     return (
       <main>
-        <div background-image>
-          <h1>Third Age Heroes</h1>
-          <Characters characters={this.state.characters} />
-        </div>
+        <h1>Third Age Heroes</h1>
+        <Characters characters={this.state.characters} />
       </main>
     );
   }
