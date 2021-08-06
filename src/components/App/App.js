@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Characters from "../Characters/Characters";
+import Characters from "../Characters/Characters";
 import Quote from "../Quote/Quote";
 import "./App.css";
 import { getMainCharacters, getCharacterQuote } from "../../apiCalls.js";
@@ -42,9 +42,11 @@ class App extends Component {
   render() {
     return (
       <main>
+        <nav></nav>
         <h1>Who Said...?</h1>
-        {/* <Characters characters={this.state.characters} /> */}
+        <Characters characters={this.state.characters} />
         <Quote quote={this.state.quote} />
+        <Characters />
       </main>
     );
   }
