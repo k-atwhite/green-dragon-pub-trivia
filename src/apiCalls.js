@@ -11,8 +11,8 @@ export const getMainCharacters = () => {
   ).then((response) => response.json());
 };
 
-export const getQuote = (characterId) => {
-  return fetch(`https://the-one-api.dev/v2/quote/${characterId}`, {
+export const getCharacterQuote = (characterId) => {
+  return fetch(`https://the-one-api.dev/v2/character/${characterId}/quote`, {
     method: "GET",
     headers: {
       Accept: "application/json",
