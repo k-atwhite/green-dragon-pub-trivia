@@ -1,37 +1,59 @@
 import React, { Component } from "react";
-import Characters from "../Characters/Characters";
+// import Characters from "../Characters/Characters";
+import Quote from "../Quote/Quote";
 import "./App.css";
-import { fetchAllCharacters } from "../../apiCalls.js";
+import { getMainCharacters, getCharacterQuote } from "../../apiCalls.js";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       characters: [],
-      quote: "",
-      choices: [],
+      quote: [],
       error: "",
     };
   }
 
-  componentDidMount = () => {
-    fetchAllCharacters()
+  componentDidMount() {
+    getMainCharacters()
       .then((data) => this.setState({ characters: data.docs }))
-      .catch(() =>
+      .then(() => this.setQuote());
+  }
+
+  randomNum = (num) => {
+    let randomNum = Math.floor(Math.random() * num + 1);
+    return randomNum;
+  };
+
+  setQuote = () => {
+    if (this.state.characters.length) {
+      let randomCharacterId =
+        this.state.characters[this.randomNum(this.state.characters.length)][
+          "_id"
+        ];
+      getCharacterQuote(randomCharacterId).then((data) =>
         this.setState({
-          error: "Our apoloies, we are experiencing a server issue",
+          quote: data.docs[this.randomNum(data.docs.length)]["dialog"],
         })
       );
+    }
   };
 
   render() {
     return (
       <main>
-        <h1>Third Age Heroes</h1>
-        <Characters characters={this.state.characters} />
+        <h1>Who Said...?</h1>
+        {/* <Characters characters={this.state.characters} /> */}
+        <Quote quote={this.state.quote} />
       </main>
     );
   }
 }
 
 export default App;
+
+// .catch(() =>
+//         this.setState({
+//           error: "Our apologies, we are experiencing a server issue",
+//         })
+//       );
