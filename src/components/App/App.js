@@ -9,7 +9,7 @@ class App extends Component {
     super(props);
     this.state = {
       characters: [],
-      characterId: [
+      characterIds: [
         "5cd99d4bde30eff6ebccfbe6",
         "5cd99d4bde30eff6ebccfc07",
         "5cd99d4bde30eff6ebccfc38",
@@ -29,7 +29,7 @@ class App extends Component {
         "5cd99d4bde30eff6ebccfe19",
         "5cdbdecb6dc0baeae48cfa59",
       ],
-      quote: [],
+      quotes: [],
       error: "",
     };
   }
@@ -41,18 +41,45 @@ class App extends Component {
   // }
 
   // If i had state that already had ALL the IDs
+  // componentDidMount() {
+  //   getMainCharacters()
+  //     .then((data) => {
+  //       this.setState({ characters: data.docs });
+  //       return getCharacterQuote(this.state.characterId[this.randomNum(19)]);
+  //     })
+  //     .then((data) =>
+  //       this.setState({
+  //         quote: data.docs[this.randomNum(data.docs.length)]["dialog"],
+  //       })
+  //     );
+  // }
+
+  // If i had state that already had ALL the IDs
   componentDidMount() {
-    getMainCharacters()
-      .then((data) => {
-        this.setState({ characters: data.docs });
-        return getCharacterQuote(this.state.characterId[this.randomNum(19)]);
-      })
-      .then((data) =>
-        this.setState({
-          quote: data.docs[this.randomNum(data.docs.length)]["dialog"],
-        })
+    getMainCharacters().then((data) => {
+      this.setState({ characters: data.docs });
+      return this.state.characterIds.forEach((characterId) =>
+        getCharacterQuote(characterId).then((data) =>
+          this.setState({ quotes: [...this.state.quotes, data] })
+        )
       );
+    });
   }
+
+  // componentDidMount() {
+  //   getMainCharacters()
+  //     .then((data) => this.setState({ characters: data.docs }))
+  //     .then(() => this.setQuotes());
+  // }
+
+  // setQuotes = () => {
+  //   return this.state.characterIds.forEach((characterId) =>
+  //     getCharacterQuote(characterId)
+  //     .then((data) =>
+  //       this.state.quotes.push(data)
+  //     )
+  //   );
+  // };
 
   randomNum = (num) => {
     let randomNum = Math.floor(Math.random() * num + 1);
@@ -79,8 +106,8 @@ class App extends Component {
     return (
       <main>
         <h1>Which hero of the Third Age spoke these words?</h1>
-        {/* <Characters characters={this.state.characters} /> */}
-        <Quote quote={this.state.quote} />
+        <Characters characters={this.state.characters} />
+        <Quote quote={this.state.quotes} />
       </main>
     );
   }
