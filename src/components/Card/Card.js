@@ -10,6 +10,7 @@ const Card = ({ name, race, gender, realm, birthday, wikiUrl, id }) => {
       <p>{realm}</p>
       <p>{birthday}</p>
       <p>{wikiUrl}</p>
+      <p>{id}</p>
     </div>
   );
 };

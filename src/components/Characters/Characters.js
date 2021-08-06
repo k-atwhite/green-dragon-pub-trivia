@@ -3,7 +3,17 @@ import Card from "../Card/Card";
 import "./Characters.css";
 
 const Characters = ({ characters }) => {
-  const characterCards = characters.map((character) => {
+  // let randomOptions = [];
+  // if (characters.length) {
+  //   randomOptions = [
+  //     characters[Math.floor(Math.random() * 18)],
+  //     characters[Math.floor(Math.random() * 18)],
+  //     characters[Math.floor(Math.random() * 18)],
+  //   ];
+  // }
+  // console.log(randomOptions);
+
+  let characterCards = characters.map((character) => {
     return (
       <Card
         key={character._id}

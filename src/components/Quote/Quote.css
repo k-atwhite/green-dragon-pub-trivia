@@ -1,6 +1,6 @@
 .quote-container {
-  box-sizing: border-box;
-  border: 3px solid black;
-  padding: 10px;
   background: url(../../resources/parchment.jpg);
+  width: 50vw;
+  text-align: center;
+  margin-top: 15vw;
 }

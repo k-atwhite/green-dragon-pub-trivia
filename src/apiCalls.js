@@ -20,3 +20,8 @@ export const getCharacterQuote = (characterId) => {
     },
   }).then((response) => response.json());
 };
+
+// How to improve performance
+// How can i get data to resolve at the same time?
+// How can the app work these asynchronously
+// Async await?
