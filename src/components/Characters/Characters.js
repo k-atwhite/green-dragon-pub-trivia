@@ -3,31 +3,24 @@ import Card from "../Card/Card";
 import "./Characters.css";
 
 const Characters = ({ characters }) => {
-  const characterNames = characters.map((character) => {
-    return character.name;
-  });
+  // let character1 = characters[Math.floor(Math.random() * characters.length)];
+  // let character2 = characters[Math.floor(Math.random() * characters.length)];
+  // let character3 = characters[Math.floor(Math.random() * characters.length)];
 
-  // const randomOptions = random.sample(characterNames, 3);
-  let character1 =
-    characterNames[Math.floor(Math.random() * characterNames.length)];
-  let character2 =
-    characterNames[Math.floor(Math.random() * characterNames.length)];
-  let character3 =
-    characterNames[Math.floor(Math.random() * characterNames.length)];
+  // let randomOptions = [character1, character2, character3];
+  // console.log(randomOptions);
 
-  const randomOptions = [character1, character2, character3];
-
-  const characterCards = randomOptions.map((character) => {
+  const characterCards = characters.map((character) => {
     return (
       <Card
         key={character._id}
         id={character._id}
         name={character.name}
-        // race={character.race}
-        // gender={character.gender}
-        // realm={character.realm}
-        // birthday={character.birth}
-        // wikiUrl={character.wikiUrl}
+        race={character.race}
+        gender={character.gender}
+        realm={character.realm}
+        birthday={character.birth}
+        wikiUrl={character.wikiUrl}
       ></Card>
     );
   });

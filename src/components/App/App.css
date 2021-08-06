@@ -1,5 +1,8 @@
 main {
   font-family: "Cormorant Unicase", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
