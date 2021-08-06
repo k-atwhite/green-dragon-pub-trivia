@@ -24,23 +24,23 @@ class App extends Component {
       .then((data) => this.setState({ characters: data.docs }))
       .catch(() =>
         this.setState({
-          error: "Our apoloies, we are experiencing a server issue",
+          error: "Our apologies, we are experiencing a server issue",
         })
       );
-    // getCharacterQuote().then((data) =>
-    //   this.setState({ quotes: data.docs })
-    // );
-    this.fetchRandomQuote();
   };
 
-  fetchRandomQuote = () => {
-    let randomCharacter = this.state.characters[5];
-    getCharacterQuote(randomCharacter.id).then((data) =>
-      this.setState({ quotes: data.docs })
-    );
+  setQuote = () => {
+    if (this.state.characters.length) {
+      let randomCharacterId = this.state.characters[5]["_id"];
+      getCharacterQuote(randomCharacterId).then((data) =>
+        this.setState({ quotes: data.docs })
+      );
+    }
   };
 
   render() {
+    this.setQuote();
+
     return (
       <main>
         <h1>Who Said...?</h1>
