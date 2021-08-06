@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Characters from "../Characters/Characters";
-import Quote from "../Quote/Quote";
+// import Quote from "../Quote/Quote";
 import "./App.css";
 import { getMainCharacters, getCharacterQuote } from "../../apiCalls.js";
 
@@ -41,20 +41,6 @@ class App extends Component {
   // }
 
   // If i had state that already had ALL the IDs
-  // componentDidMount() {
-  //   getMainCharacters()
-  //     .then((data) => {
-  //       this.setState({ characters: data.docs });
-  //       return getCharacterQuote(this.state.characterId[this.randomNum(19)]);
-  //     })
-  //     .then((data) =>
-  //       this.setState({
-  //         quote: data.docs[this.randomNum(data.docs.length)]["dialog"],
-  //       })
-  //     );
-  // }
-
-  // If i had state that already had ALL the IDs
   componentDidMount() {
     getMainCharacters().then((data) => {
       this.setState({ characters: data.docs });
@@ -66,21 +52,7 @@ class App extends Component {
     });
   }
 
-  // componentDidMount() {
-  //   getMainCharacters()
-  //     .then((data) => this.setState({ characters: data.docs }))
-  //     .then(() => this.setQuotes());
-  // }
-
-  // setQuotes = () => {
-  //   return this.state.characterIds.forEach((characterId) =>
-  //     getCharacterQuote(characterId)
-  //     .then((data) =>
-  //       this.state.quotes.push(data)
-  //     )
-  //   );
-  // };
-
+  // PUT THIS IN UTILS
   randomNum = (num) => {
     let randomNum = Math.floor(Math.random() * num + 1);
     return randomNum;
@@ -107,7 +79,7 @@ class App extends Component {
       <main>
         <h1>Which hero of the Third Age spoke these words?</h1>
         <Characters characters={this.state.characters} />
-        <Quote quote={this.state.quotes} />
+        {/* <Quote quotes={this.state.quotes} /> */}
       </main>
     );
   }
