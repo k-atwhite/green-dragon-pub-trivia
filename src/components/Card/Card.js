@@ -1,11 +1,10 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({ dialog, key, id }) => {
+const Card = ({ dialog }) => {
   return (
-    <div className="quote-card" key={key}>
+    <div className="quote-card">
       <h2>{dialog}</h2>
-      <h3>{id}</h3>
     </div>
   );
 };
