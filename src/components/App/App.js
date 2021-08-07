@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import { getMainCharacters, getCharacterQuote } from "../../apiCalls.js";
-// import Quote from "../Quote/Quote";
+import List from "../List/List";
+import "./App.css";
 
 const App = () => {
   const [character, setCharacter] = useState([]);
@@ -41,6 +41,7 @@ const App = () => {
     <main>
       {/* <h2>- {quote}</h2> */}
       <h2>- {character.name}</h2>
+      {/* <List quotes={quotes} speaker={character.name} /> */}
     </main>
   );
 };
