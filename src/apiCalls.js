@@ -1,20 +1,34 @@
-export const getMainCharacters = async () => {
+export const getMainCharacters = () => {
   console.log("Character API WAS CALLED");
 
-  const mainCharacters = await fetch(
-    "https://the-one-api.dev/v2/character?name=Gandalf,Frodo Baggins,Aragorn II Elessar,Legolas,Arwen,Galadriel,Gimli,Boromir,Bilbo Baggins,Samwise Gamgee,Gollum,Saruman,Peregrin Took,Meriadoc Brandybuck,Elrond,Théoden,Faramir,Éowyn",
-    {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        Authorization: "Bearer Qdwh7zeW6AgFOOGNGAr4",
-      },
-    }
-  );
-  const characters = await mainCharacters.json();
-  const character =
-    characters.docs[Math.floor(Math.random() * characters.docs.length)];
-  return character;
+  const names = [
+    "Gandalf",
+    "Frodo Baggins",
+    "Aragorn II Elessar",
+    "Legolas",
+    "Arwen",
+    "Galadriel",
+    "Gimli",
+    "Boromir",
+    "Bilbo Baggins",
+    "Samwise Gamgee",
+    "Gollum",
+    "Saruman",
+    "Peregrin Took",
+    "Meriadoc Brandybuck",
+    "Elrond,Théoden",
+    "Faramir",
+    "Éowyn",
+  ];
+  let randomName = names[Math.floor(Math.random() * names.length)];
+
+  return fetch(`https://the-one-api.dev/v2/character?name=${randomName}`, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+      Authorization: "Bearer Qdwh7zeW6AgFOOGNGAr4",
+    },
+  }).then((response) => response.json());
 };
 
 export const getCharacterQuotes = (characterId) => {
@@ -28,6 +42,25 @@ export const getCharacterQuotes = (characterId) => {
     },
   }).then((response) => response.json());
 };
+
+// export const getMainCharacters = async () => {
+//   console.log("Character API WAS CALLED");
+
+//   const mainCharacters = await fetch(
+//     "https://the-one-api.dev/v2/character?name=Gandalf,Frodo Baggins,Aragorn II Elessar,Legolas,Arwen,Galadriel,Gimli,Boromir,Bilbo Baggins,Samwise Gamgee,Gollum,Saruman,Peregrin Took,Meriadoc Brandybuck,Elrond,Théoden,Faramir,Éowyn",
+//     {
+//       method: "GET",
+//       headers: {
+//         Accept: "application/json",
+//         Authorization: "Bearer Qdwh7zeW6AgFOOGNGAr4",
+//       },
+//     }
+//   );
+//   const characters = await mainCharacters.json();
+//   const character =
+//     characters.docs[Math.floor(Math.random() * characters.docs.length)];
+//   return character;
+// };
 
 //  const names = [
 //    "Gandalf",
