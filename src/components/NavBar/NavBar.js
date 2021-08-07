@@ -14,9 +14,9 @@ const NavBar = () => {
       <NavLink exact to="/heroes" className="nav-link">
         Heroes
       </NavLink>
-      <NavLink exact to="/wise-words" className="nav-link">
+      {/* <NavLink exact to="/wise-words" className="nav-link">
         Wise Words
-      </NavLink>
+      </NavLink> */}
     </nav>
   );
 };
