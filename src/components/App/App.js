@@ -9,12 +9,6 @@ const App = () => {
 
   useEffect(() => {
     getMainCharacters().then((data) => setCharacter(data.docs[0]));
-
-    // characterIds.forEach((characterId) =>
-    //   getCharacterQuote(characterId).then((data) =>
-    //     setQuotes([...quotes, data.docs])
-    //   )
-    // );
   }, []);
 
   return (
