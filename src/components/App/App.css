@@ -12,3 +12,21 @@ h1 {
 h2 {
   color: white;
 }
+
+/* ////////////////////////////////////////////////////// */
+/* NAVBAR */
+
+nav {
+  display: flex;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.nav-link:hover {
+  transform: scale(1.2);
+}
