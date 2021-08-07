@@ -5,10 +5,20 @@ main {
   align-items: center;
 }
 
-h1 {
-  color: white;
+.quote-container {
+  background: url(../../resources/parchment.jpg);
+  width: 50vw;
+  text-align: center;
+  margin-top: 15vw;
+  background-color: black;
 }
 
-h2 {
-  color: white;
+.entry-container {
+  margin-top: 10vw;
+  padding: 10vw;
+  background: url(../../resources/parchment.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
 }
