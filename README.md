@@ -32,15 +32,11 @@
 - [How to use the app](https://github.com/k-atwhite/backyard-burbs#app-setup)
 - [Future Additions](https://github.com/k-atwhite/backyard-burbs#future-additions--reflections)
  
-## Contributors
+## Contributor
 <table>
   <tr>
-    <td align="center" > <a href="https://github.com/sydnerd">Sydney Bear</td>
-    <td align="center"> <a href="https://github.com/lkessell">Lauren Kessell</td>
     <td align="center"> <a href="https://github.com/k-atwhite">Kat White</td>
   </tr>
-    <td><img src="https://avatars.githubusercontent.com/u/78241098?v=4" alt='Sydney GH image' width="150" height="auto" /></td>
-    <td><img src="https://avatars.githubusercontent.com/u/77205456?v=4" alt="Lauren GH image" width="150" height="auto" /></td>
     <td><img src="https://avatars.githubusercontent.com/u/49215782?v=4" alt="Kat GH image" width="150" height="auto" /></td>
 </table>
 
