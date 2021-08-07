@@ -11,27 +11,27 @@ const Quote = ({ characterId }) => {
     console.log(characterId);
 
     setLoading(true);
+    console.log("I got here");
 
-    getCharacterQuotes(characterId)
-      .then((data) => setQuotes(data.docs))
-      .catch((err) => {
-        console.log(err);
-      })
-      .then(() =>
-        setRandomQuote(quotes[Math.floor(Math.random() * quotes.length)].dialog)
-      )
-      .finally(() => setLoading(false));
+    if (characterId) {
+      getCharacterQuotes(characterId)
+        .then((data) => setQuotes(data.docs))
+        .catch((err) => {
+          console.log(err);
+        })
+        .then(() =>
+          setRandomQuote(
+            quotes[Math.floor(Math.random() * quotes.length)].dialog
+          )
+        )
+        .finally(() => setLoading(false));
+    }
   }, []);
 
-  if (loading) {
-    return (
-      <div className="quote-container">
-        <h2>Data is loading</h2>
-      </div>
-    );
-  }
   return (
     <div className="quote-container">
+      {loading && <h2>Data is loading</h2>}
+      {/* {quotes.length && <h2>{randomQuote}</h2>} */}
       <h2>{randomQuote}</h2>
     </div>
   );
