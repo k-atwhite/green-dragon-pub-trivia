@@ -1,38 +1,23 @@
 import { useEffect, useState } from "react";
-import { getMainCharacter, getCharacterQuotes } from "../../apiCalls.js";
+import {
+  getMainCharacter,
+  getCharacterQuotes,
+  getAllCharacters,
+} from "../../apiCalls.js";
 import { Route, Switch, Link } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
-
+import Quote from "../Quote/Quote";
 import "./App.css";
 
 const App = () => {
-  const [character, setCharacter] = useState([]);
-  const [quotes, setQuotes] = useState([]);
-  const [randomQuote, setRandomQuote] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [allCharacters, setAllCharacters] = useState([]);
+  // const [quotes, setQuotes] = useState([]);
+  // const [randomQuote, setRandomQuote] = useState("");
+  // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    getMainCharacter().then((data) => setCharacter(data.docs[0]));
+    getAllCharacters().then((data) => setAllCharacters(data.docs));
   }, []);
-
-  useEffect(() => {
-    setLoading(true);
-
-    if (character) {
-      getCharacterQuotes(character._id)
-        .then((data) => setQuotes(data.docs))
-        .catch((err) => {
-          console.log(err);
-        })
-        .finally(() => setLoading(false));
-    }
-  }, [character]);
-
-  useEffect(() => {
-    if (quotes.length && !randomQuote) {
-      setRandomQuote(quotes[0]["dialog"]);
-    }
-  }, [quotes]);
 
   return (
     <main>
@@ -55,14 +40,7 @@ const App = () => {
           path="/trivia"
           render={() => (
             <div className="quote-container">
-              {loading && <h2>Data is loading</h2>}
-              {quotes.length && (
-                <div>
-                  <h2>Who said the words...</h2>
-                  <h2>{randomQuote}</h2>
-                  <h3>{character.name}</h3>
-                </div>
-              )}
+              <Quote allCharacters={allCharacters} />
             </div>
           )}
         />
