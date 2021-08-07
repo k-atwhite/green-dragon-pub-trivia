@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getMainCharacter, getCharacterQuotes } from "../../apiCalls.js";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 
 import "./App.css";
@@ -38,7 +38,18 @@ const App = () => {
     <main>
       <NavBar />
       <Switch>
-        <Route exact path="/" />
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <div className="entry-container">
+              <p>Welcome to Trivia Night at the Green Dragon</p>
+              <p>Test your memory and honor our heros of the Third Age</p>
+              <p>best of luck to you</p>
+              <Link to="/trivia">Begin</Link>
+            </div>
+          )}
+        />
         <Route
           exact
           path="/trivia"
@@ -47,6 +58,7 @@ const App = () => {
               {loading && <h2>Data is loading</h2>}
               {quotes.length && (
                 <div>
+                  <h2>Who said the words...</h2>
                   <h2>{randomQuote}</h2>
                   <h3>{character.name}</h3>
                 </div>
