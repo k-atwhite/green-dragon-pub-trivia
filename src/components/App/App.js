@@ -37,21 +37,34 @@ const App = () => {
   return (
     <main>
       <NavBar />
-      <Route path="/" />
-      <Route
-        path="/trivia"
-        render={() => (
-          <div className="quote-container">
-            {loading && <h2>Data is loading</h2>}
-            {quotes.length && (
-              <div>
-                <h2>{randomQuote}</h2>
-                <h3>{character.name}</h3>
-              </div>
-            )}
-          </div>
-        )}
-      />
+      <Switch>
+        <Route exact path="/" />
+        <Route
+          exact
+          path="/trivia"
+          render={() => (
+            <div className="quote-container">
+              {loading && <h2>Data is loading</h2>}
+              {quotes.length && (
+                <div>
+                  <h2>{randomQuote}</h2>
+                  <h3>{character.name}</h3>
+                </div>
+              )}
+            </div>
+          )}
+        />
+        <Route
+          exact
+          path="/heroes"
+          render={() => <h1>You have not added heroes yet</h1>}
+        />
+        <Route
+          exact
+          path="/wise-words"
+          render={() => <h1>You have not added quotes yet</h1>}
+        />
+      </Switch>
     </main>
   );
 };
