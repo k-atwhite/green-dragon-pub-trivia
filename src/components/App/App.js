@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getMainCharacters } from "../../apiCalls.js";
 import Quote from "../Quote/Quote";
+import { Route, Switch } from "react-router-dom";
 
 import "./App.css";
 
@@ -13,6 +14,7 @@ const App = () => {
 
   return (
     <main>
+      <Route path="/" component={Home} />
       <h2>Hero: {character.name}</h2>
       <Quote characterId={character._id} />
     </main>
