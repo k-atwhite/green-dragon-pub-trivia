@@ -1,5 +1,6 @@
 export const getMainCharacters = async () => {
-  console.log("Quote API WAS CALLED");
+  console.log("Character API WAS CALLED");
+
   const mainCharacters = await fetch(
     "https://the-one-api.dev/v2/character?name=Gandalf,Frodo Baggins,Aragorn II Elessar,Legolas,Arwen,Galadriel,Gimli,Boromir,Bilbo Baggins,Samwise Gamgee,Gollum,Saruman,Peregrin Took,Meriadoc Brandybuck,Elrond,Théoden,Faramir,Éowyn",
     {
@@ -16,8 +17,8 @@ export const getMainCharacters = async () => {
   return character;
 };
 
-export const getCharacterQuote = (characterId) => {
-  console.log("Character API WAS CALLED");
+export const getCharacterQuotes = (characterId) => {
+  console.log("Quote API WAS CALLED");
 
   return fetch(`https://the-one-api.dev/v2/character/${characterId}/quote`, {
     method: "GET",
@@ -27,6 +28,26 @@ export const getCharacterQuote = (characterId) => {
     },
   }).then((response) => response.json());
 };
+
+//  const names = [
+//    "Gandalf",
+//    "Frodo Baggins",
+//    "Aragorn II Elessar",
+//    "Legolas",
+//    "Arwen",
+//    "Galadriel",
+//    "Gimli",
+//    "Boromir",
+//    "Bilbo Baggins",
+//    "Samwise Gamgee",
+//    "Gollum",
+//    "Saruman",
+//    "Peregrin Took",
+//    "Meriadoc Brandybuck",
+//    "Elrond,Théoden",
+//    "Faramir",
+//    "Éowyn",
+//  ];
 
 // export const getCharacterQuote = async (characterId) => {
 //   const characterQuotes = await fetch(
