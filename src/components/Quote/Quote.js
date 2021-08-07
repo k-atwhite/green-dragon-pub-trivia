@@ -3,7 +3,8 @@ import "./Quote.css";
 import { getCharacterQuotes } from "../../apiCalls.js";
 import List from "../List/List";
 
-const Quote = ({ character }) => {
+const Quote = ({ allCharacters }) => {
+  const [character, setCharacter] = useState({});
   const [quotes, setQuotes] = useState([]);
   const [randomQuote, setRandomQuote] = useState("");
   const [loading, setLoading] = useState(false);
@@ -11,6 +12,14 @@ const Quote = ({ character }) => {
   useEffect(() => {
     setLoading(true);
 
+    if (allCharacters.length) {
+      let randomCharacter =
+        allCharacters[Math.floor(Math.random() * allCharacters.length)];
+      setCharacter(randomCharacter);
+    }
+  }, [allCharacters]);
+
+  useEffect(() => {
     if (character) {
       getCharacterQuotes(character._id)
         .then((data) => setQuotes(data.docs))
@@ -36,7 +45,6 @@ const Quote = ({ character }) => {
           <h3>{character.name}</h3>
         </div>
       )}
-      {/* <List quotes={quotes} key={characterId} /> */}
     </div>
   );
 };
