@@ -45,19 +45,19 @@ export const getCharacterQuotes = (characterId) => {
 
 ///// API CALL TO GET ALL CHARACTERS ///////////
 
-// export const getAllCharacters = () => {
-//   console.log("All Characters API WAS CALLED");
+export const getAllCharacters = () => {
+  console.log("All Characters API WAS CALLED");
 
-//   let joinedNames = names.join(",");
+  let joinedNames = names.join(",");
 
-//   return fetch(`https://the-one-api.dev/v2/character?name=${joinedNames}`, {
-//     method: "GET",
-//     headers: {
-//       Accept: "application/json",
-//       Authorization: "Bearer Qdwh7zeW6AgFOOGNGAr4",
-//     },
-//   }).then((response) => response.json());
-// };
+  return fetch(`https://the-one-api.dev/v2/character?name=${joinedNames}`, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+      Authorization: "Bearer Qdwh7zeW6AgFOOGNGAr4",
+    },
+  }).then((response) => response.json());
+};
 
 //  const names = [
 //    "Gandalf",
