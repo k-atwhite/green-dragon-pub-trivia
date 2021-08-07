@@ -17,16 +17,20 @@ export const getMainCharacters = async () => {
   return character;
 };
 
-export const getCharacterQuotes = (characterId) => {
+export const getCharacterQuotes = async (characterId) => {
   console.log("Quote API WAS CALLED");
 
-  return fetch(`https://the-one-api.dev/v2/character/${characterId}/quote`, {
-    method: "GET",
-    headers: {
-      Accept: "application/json",
-      Authorization: "Bearer Qdwh7zeW6AgFOOGNGAr4",
-    },
-  }).then((response) => response.json());
+  const response = await fetch(
+    `https://the-one-api.dev/v2/character/${characterId}/quote`,
+    {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        Authorization: "Bearer Qdwh7zeW6AgFOOGNGAr4",
+      },
+    }
+  );
+  return await response.json();
 };
 
 //  const names = [
