@@ -1,10 +1,10 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({ dialog, key }) => {
+const Card = ({ name }) => {
   return (
-    <div className="quote-card" key={key}>
-      <h2>{dialog}</h2>
+    <div className="quote-card">
+      <h2>{name}</h2>
     </div>
   );
 };
