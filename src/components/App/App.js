@@ -21,13 +21,15 @@ const App = () => {
         <NavLink exact to="/trivia" className="nav-link">
           Quote Trivia
         </NavLink>
+        <NavLink exact to="/heroes" className="nav-link">
+          Heroes
+        </NavLink>
         <NavLink exact to="/wise-words" className="nav-link">
           Wise Words
         </NavLink>
       </nav>
       <Route path="/" />
-      <h2>Hero: {character.name}</h2>
-      <Quote characterId={character._id} />
+      <Route path="/trivia" render={() => <Quote character={character} />} />
     </main>
   );
 };
