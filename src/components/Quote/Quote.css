@@ -1,8 +1,8 @@
 .quote-container {
-  /* background: url(../../resources/parchment.jpg); */
+  background: url(../../resources/parchment.jpg);
   width: 50vw;
   text-align: center;
-  margin-top: 15vw;
+  margin-top: 5vw;
   background-color: black;
 }
 
