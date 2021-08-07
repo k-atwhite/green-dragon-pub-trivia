@@ -34,8 +34,8 @@ const Quote = ({ characterId }) => {
   return (
     <div className="quote-container">
       {loading && <h2>Data is loading</h2>}
-      {quotes.length && <h2>{randomQuote}</h2>}
-      {/* <List quotes={quotes} key={characterId} /> */}
+      {/* {quotes.length && <h2>{randomQuote}</h2>} */}
+      <List quotes={quotes} key={characterId} />
     </div>
   );
 };
