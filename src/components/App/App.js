@@ -6,7 +6,6 @@ import { getMainCharacters, getCharacterQuote } from "../../apiCalls.js";
 const App = () => {
   const [character, setCharacter] = useState([]);
   const [quotes, setQuotes] = useState([]);
-  const [quote, setQuote] = useState("");
   const [characterIds] = useState([
     "5cd99d4bde30eff6ebccfbe6",
     "5cd99d4bde30eff6ebccfc07",
@@ -41,7 +40,6 @@ const App = () => {
   return (
     <main>
       {/* <h2>- {quote}</h2> */}
-      {/* <Quote characterId={character["_id"]} /> */}
       <h2>- {character.name}</h2>
     </main>
   );
