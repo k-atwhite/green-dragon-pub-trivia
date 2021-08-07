@@ -13,20 +13,18 @@ h2 {
   color: white;
 }
 
-/* ///////////////////////NAVBAR///////////////////////////// */
-
-nav {
-  display: flex;
+.quote-container {
+  /* background: url(../../resources/parchment.jpg); */
+  width: 50vw;
+  text-align: center;
+  margin-top: 15vw;
+  background-color: black;
 }
 
-.nav-link {
+h2 {
   color: white;
-  text-decoration: none;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  font-size: 150%;
 }
 
-.nav-link:hover {
-  transform: scale(1.2);
+h3 {
+  color: white;
 }

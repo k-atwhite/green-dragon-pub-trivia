@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
-import { getMainCharacters, getCharacterQuotes } from "../../apiCalls.js";
-import { Route, Switch, NavLink } from "react-router-dom";
+import { getMainCharacter, getCharacterQuotes } from "../../apiCalls.js";
+import { Route, Switch } from "react-router-dom";
+import NavBar from "../NavBar/NavBar";
 
 import "./App.css";
 
 const App = () => {
-  const [allCharacters, setAllCharacters] = useState([]);
   const [character, setCharacter] = useState([]);
   const [quotes, setQuotes] = useState([]);
   const [randomQuote, setRandomQuote] = useState("");
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    getMainCharacters().then((data) => setCharacter(data.docs[0]));
+    getMainCharacter().then((data) => setCharacter(data.docs[0]));
   }, []);
 
   useEffect(() => {
@@ -36,20 +36,7 @@ const App = () => {
 
   return (
     <main>
-      <nav>
-        <NavLink exact to="/" className="nav-link">
-          Home
-        </NavLink>
-        <NavLink exact to="/trivia" className="nav-link">
-          Quote Trivia
-        </NavLink>
-        <NavLink exact to="/heroes" className="nav-link">
-          Heroes
-        </NavLink>
-        <NavLink exact to="/wise-words" className="nav-link">
-          Wise Words
-        </NavLink>
-      </nav>
+      <NavBar />
       <Route path="/" />
       <Route
         path="/trivia"
