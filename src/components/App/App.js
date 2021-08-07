@@ -3,6 +3,7 @@ import { getAllCharacters } from "../../apiCalls.js";
 import { Route, Switch, Link } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import Quote from "../Quote/Quote";
+import List from "../List/List";
 import "./App.css";
 
 const App = () => {
@@ -40,7 +41,7 @@ const App = () => {
         <Route
           exact
           path="/heroes"
-          render={() => <h1>You have not added heroes yet</h1>}
+          render={() => <List data={allCharacters} />}
         />
         <Route
           exact

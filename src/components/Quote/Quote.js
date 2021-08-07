@@ -40,6 +40,7 @@ const Quote = ({ allCharacters }) => {
       {loading && <h2>Data is loading</h2>}
       {quotes.length && (
         <div>
+          <h2>Who said the words...</h2>
           <h2>{randomQuote}</h2>
           <h3>{character.name}</h3>
         </div>

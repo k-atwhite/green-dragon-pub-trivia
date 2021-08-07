@@ -18,22 +18,7 @@ const names = [
   "Éowyn",
 ];
 
-export const getMainCharacter = () => {
-  console.log("Character API WAS CALLED");
-  let randomName = names[Math.floor(Math.random() * names.length)];
-
-  return fetch(`https://the-one-api.dev/v2/character?name=${randomName}`, {
-    method: "GET",
-    headers: {
-      Accept: "application/json",
-      Authorization: "Bearer Qdwh7zeW6AgFOOGNGAr4",
-    },
-  }).then((response) => response.json());
-};
-
 export const getCharacterQuotes = (characterId) => {
-  console.log("Quote API WAS CALLED");
-
   return fetch(`https://the-one-api.dev/v2/character/${characterId}/quote`, {
     method: "GET",
     headers: {
@@ -43,11 +28,7 @@ export const getCharacterQuotes = (characterId) => {
   }).then((response) => response.json());
 };
 
-///// API CALL TO GET ALL CHARACTERS ///////////
-
 export const getAllCharacters = () => {
-  console.log("All Characters API WAS CALLED");
-
   let joinedNames = names.join(",");
 
   return fetch(`https://the-one-api.dev/v2/character?name=${joinedNames}`, {
