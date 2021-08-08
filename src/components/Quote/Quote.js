@@ -53,12 +53,12 @@ const Quote = ({ allCharacters }) => {
   return (
     <div className="quote-container">
       {error && <h2>{error}</h2>}
-      {loading && <h2>loading quote...</h2>}
+      {loading && <h2 className="load-msg">loading quote...</h2>}
       {quotes.length && (
         <div>
           {!response && <h2>Who said the words...</h2>}
-          {response && <h2>{response}</h2>}
-          <h2>{randomQuote}</h2>
+          {response && <h2 className="response">{response}</h2>}
+          <h2 className="quote-text">{randomQuote}</h2>
           <div className="character-guesses">
             <Options
               data={allCharacters}

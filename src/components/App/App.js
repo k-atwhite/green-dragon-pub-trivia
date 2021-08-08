@@ -38,9 +38,7 @@ const App = () => {
           exact
           path="/trivia"
           render={() => (
-            <div className="quote-container">
               <Quote allCharacters={allCharacters} />
-            </div>
           )}
         />
         <Route
