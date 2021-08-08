@@ -19,6 +19,7 @@ const names = [
 ];
 
 export const getCharacterQuotes = (characterId) => {
+  console.log("Quote API was called!");
   return fetch(`https://the-one-api.dev/v2/character/${characterId}/quote`, {
     method: "GET",
     headers: {
@@ -29,6 +30,7 @@ export const getCharacterQuotes = (characterId) => {
 };
 
 export const getAllCharacters = () => {
+  console.log("Character API was called!");
   let joinedNames = names.join(",");
 
   return fetch(`https://the-one-api.dev/v2/character?name=${joinedNames}`, {

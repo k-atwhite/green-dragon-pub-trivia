@@ -20,7 +20,7 @@ const Options = ({ data, validateAnswer }) => {
     );
   });
 
-  return <div className="list-container">{cards}</div>;
+  return <div className="options-container">{cards}</div>;
 };
 
 export default Options;
