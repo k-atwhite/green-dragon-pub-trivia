@@ -8,9 +8,12 @@ import "./App.css";
 
 const App = () => {
   const [allCharacters, setAllCharacters] = useState([]);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    getAllCharacters().then((data) => setAllCharacters(data.docs));
+    getAllCharacters()
+      .then((data) => setAllCharacters(data.docs))
+      .catch((err) => console.log(err));
   }, []);
 
   return (
@@ -26,6 +29,7 @@ const App = () => {
               <p>Test your memory and honor our heros of the Third Age</p>
               <p>best of luck to you</p>
               <Link to="/trivia">Begin</Link>
+              {/* <Link to="/heroes">If you need to practice</Link> */}
             </div>
           )}
         />
@@ -43,6 +47,9 @@ const App = () => {
           path="/heroes"
           render={() => <Characters characters={allCharacters} />}
         />
+        {/* <Route
+          exact path="/heroes/${name}"
+        /> */}
       </Switch>
     </main>
   );

@@ -9,6 +9,7 @@ const Quote = ({ allCharacters }) => {
   const [randomQuote, setRandomQuote] = useState("");
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
     setLoading(true);
@@ -25,7 +26,7 @@ const Quote = ({ allCharacters }) => {
       getCharacterQuotes(character._id)
         .then((data) => setQuotes(data.docs))
         .catch((err) => {
-          console.log(err);
+          setError(`${err}:trouble loading character...`);
         })
         .finally(() => setLoading(false));
     }
@@ -50,6 +51,7 @@ const Quote = ({ allCharacters }) => {
 
   return (
     <div className="quote-container">
+      {error && <h2>{error}</h2>}
       {loading && <h2>loading quote...</h2>}
       {quotes.length && (
         <div>
