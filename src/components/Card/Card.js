@@ -3,7 +3,7 @@ import "./Card.css";
 
 const Card = ({ name }) => {
   return (
-    <div className="card">
+    <div className="card" onClick={console.log(target.id)}>
       <h3>{name}</h3>
     </div>
   );
