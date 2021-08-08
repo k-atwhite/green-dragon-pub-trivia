@@ -1,15 +1,15 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({ name, id }) => {
+const Card = ({ name, id, validateAnswer }) => {
   return (
-    <div
+    <button
       className="card"
-      id={id}
-      onClick={(event) => console.log(event.target.id)}
+      id={name}
+      onClick={(event) => validateAnswer(event.target.id)}
     >
-      <h3>{name}</h3>
-    </div>
+      {name}
+    </button>
   );
 };
 

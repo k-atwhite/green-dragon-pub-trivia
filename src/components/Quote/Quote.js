@@ -37,11 +37,12 @@ const Quote = ({ allCharacters }) => {
     }
   }, [quotes]);
 
-  const validateAnswer = (event) => {
-    if (event.target.id === character.id) {
+  const validateAnswer = (id) => {
+    if (id === character.name) {
       setResponse("Well done, that's correct");
+    } else {
+      setResponse(`Actually, that was ${character.name}`);
     }
-    setResponse("They never said that...");
   };
 
   return (
@@ -49,10 +50,9 @@ const Quote = ({ allCharacters }) => {
       {loading && <h2>loading quote...</h2>}
       {quotes.length && (
         <div>
-          <h2>Who said the words...</h2>
-          {response && <h2>response</h2>}
+          {!response && <h2>Who said the words...</h2>}
+          {response && <h2>{response}</h2>}
           <h2>{randomQuote}</h2>
-          <h3>{character.name}</h3>
           <div className="character-guesses">
             <List data={allCharacters} validateAnswer={validateAnswer}></List>
           </div>

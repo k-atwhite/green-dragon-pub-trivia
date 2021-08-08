@@ -13,6 +13,7 @@ const List = ({ data, validateAnswer }) => {
         gender={character.gender}
         realm={character.realm}
         birthday={character.birth}
+        validateAnswer={validateAnswer}
         // wikiUrl={character.wikiUrl}
       />
     );
