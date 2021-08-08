@@ -3,7 +3,7 @@ import { getAllCharacters } from "../../apiCalls.js";
 import { Route, Switch, Link } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import Quote from "../Quote/Quote";
-import List from "../List/List";
+import List from "../Options/Options";
 import "./App.css";
 
 const App = () => {

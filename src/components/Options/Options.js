@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../Card/Card";
-import "./List.css";
+import "./Options.css";
 
 const List = ({ data, validateAnswer }) => {
   let cards = data.map((character) => {

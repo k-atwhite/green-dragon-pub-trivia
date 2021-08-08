@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Quote.css";
 import { getCharacterQuotes } from "../../apiCalls.js";
-import List from "../List/List";
+import Options from "../Options/Options";
 
 const Quote = ({ allCharacters }) => {
   const [character, setCharacter] = useState({});
@@ -43,6 +43,9 @@ const Quote = ({ allCharacters }) => {
     } else {
       setResponse(`Actually, that was ${character.name}`);
     }
+    setTimeout(function () {
+      window.location.reload();
+    }, 3000);
   };
 
   return (
@@ -54,7 +57,10 @@ const Quote = ({ allCharacters }) => {
           {response && <h2>{response}</h2>}
           <h2>{randomQuote}</h2>
           <div className="character-guesses">
-            <List data={allCharacters} validateAnswer={validateAnswer}></List>
+            <Options
+              data={allCharacters}
+              validateAnswer={validateAnswer}
+            ></Options>
           </div>
         </div>
       )}
