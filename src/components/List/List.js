@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 import "./List.css";
 
 const List = ({ data }) => {
-  let quoteCards = data.map((character) => {
+  let cards = data.map((character) => {
     return (
       <Card
         name={character.name}
@@ -17,7 +17,7 @@ const List = ({ data }) => {
     );
   });
 
-  return <div className="list-container">{quoteCards}</div>;
+  return <div className="list-container">{cards}</div>;
 };
 
 export default List;

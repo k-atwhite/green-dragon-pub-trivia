@@ -1,14 +1,10 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({ name, race, gender, realm, birthday }) => {
+const Card = ({ name }) => {
   return (
     <div className="card">
-      <h2>{name}</h2>
-      <p>{race}</p>
-      <p>{gender}</p>
-      <p>Realm: {realm}</p>
-      <p>Birth: {birthday}</p>
+      <h3>{name}</h3>
     </div>
   );
 };
