@@ -35,6 +35,7 @@ const App = () => {
           render={() => (
             <div className="quote-container">
               <Quote allCharacters={allCharacters} />
+              <List data={allCharacters} />
             </div>
           )}
         />
