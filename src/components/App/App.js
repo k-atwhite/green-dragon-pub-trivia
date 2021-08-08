@@ -8,7 +8,6 @@ import "./App.css";
 
 const App = () => {
   const [allCharacters, setAllCharacters] = useState([]);
-  const [error, setError] = useState("");
 
   useEffect(() => {
     getAllCharacters()
