@@ -3,8 +3,13 @@ import "./Character.css";
 import PropTypes from "prop-types";
 
 const Character = ({ name, race, gender, realm, birth, wikiUrl }) => {
+  if (!name) {
+    return (
+      <h2>We are having trouble fetching that information</h2>
+    )
+  }
   return (
-    <div className="card" id={name}>
+    <div className="card character" id={name}>
       <p>{name}</p>
       <p>{race}</p>
       <p>{gender}</p>

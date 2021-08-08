@@ -27,7 +27,9 @@ const App = () => {
               <p>Welcome to Trivia Night at the Green Dragon</p>
               <p>Test your memory and honor our heros of the Third Age</p>
               <p>best of luck to you</p>
-              <Link to="/trivia">Begin</Link>
+              <Link className="link" to="/trivia">
+                Begin
+              </Link>
               {/* <Link to="/heroes">If you need to practice</Link> */}
             </div>
           )}
@@ -36,9 +38,7 @@ const App = () => {
           exact
           path="/trivia"
           render={() => (
-            <div className="quote-container">
               <Quote allCharacters={allCharacters} />
-            </div>
           )}
         />
         <Route
