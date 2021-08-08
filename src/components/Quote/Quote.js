@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./Quote.css";
 import { getCharacterQuotes } from "../../apiCalls.js";
 import Options from "../Options/Options";
+import PropTypes from "prop-types";
 
 const Quote = ({ allCharacters }) => {
   const [character, setCharacter] = useState({});
@@ -71,3 +72,7 @@ const Quote = ({ allCharacters }) => {
 };
 
 export default Quote;
+
+Options.propTypes = {
+  allCharacters: PropTypes.array,
+};

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Character.css";
+import PropTypes from "prop-types";
 
 const Character = ({ name, race, gender, realm, birth, wikiUrl }) => {
   return (
@@ -15,3 +16,12 @@ const Character = ({ name, race, gender, realm, birth, wikiUrl }) => {
 };
 
 export default Character;
+
+Character.propTypes = {
+  name: PropTypes.string,
+  race: PropTypes.string,
+  gender: PropTypes.string,
+  realm: PropTypes.string,
+  birth: PropTypes.string,
+  wikiUrl: PropTypes.string,
+};

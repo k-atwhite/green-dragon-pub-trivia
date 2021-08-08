@@ -1,8 +1,9 @@
 import React from "react";
 import Card from "../Card/Card";
 import "./Options.css";
+import PropTypes from "prop-types";
 
-const List = ({ data, validateAnswer }) => {
+const Options = ({ data, validateAnswer }) => {
   let cards = data.map((character) => {
     return (
       <Card
@@ -22,4 +23,9 @@ const List = ({ data, validateAnswer }) => {
   return <div className="list-container">{cards}</div>;
 };
 
-export default List;
+export default Options;
+
+Options.propTypes = {
+  data: PropTypes.array,
+  validateAnswer: PropTypes.func,
+};

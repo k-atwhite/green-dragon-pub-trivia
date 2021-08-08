@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Card.css";
 
 const Card = ({ name, validateAnswer }) => {
@@ -14,3 +15,8 @@ const Card = ({ name, validateAnswer }) => {
 };
 
 export default Card;
+
+Card.propTypes = {
+  name: PropTypes.string,
+  validateAnswer: PropTypes.func,
+};
