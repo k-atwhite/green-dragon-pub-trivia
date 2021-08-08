@@ -8,6 +8,7 @@ const List = ({ data, validateAnswer }) => {
       <Card
         name={character.name}
         key={character._id}
+        id={character._id}
         race={character.race}
         gender={character.gender}
         realm={character.realm}

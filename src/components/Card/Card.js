@@ -1,9 +1,13 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({ name }) => {
+const Card = ({ name, id }) => {
   return (
-    <div className="card" onClick={console.log(target.id)}>
+    <div
+      className="card"
+      id={id}
+      onClick={(event) => console.log(event.target.id)}
+    >
       <h3>{name}</h3>
     </div>
   );
