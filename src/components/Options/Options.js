@@ -14,7 +14,7 @@ const List = ({ data, validateAnswer }) => {
         realm={character.realm}
         birthday={character.birth}
         validateAnswer={validateAnswer}
-        // wikiUrl={character.wikiUrl}
+        wikiUrl={character.wikiUrl}
       />
     );
   });

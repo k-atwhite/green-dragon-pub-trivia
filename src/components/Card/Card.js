@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({ name, id, validateAnswer }) => {
+const Card = ({ name, validateAnswer }) => {
   return (
     <button
       className="card"

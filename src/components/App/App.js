@@ -3,7 +3,7 @@ import { getAllCharacters } from "../../apiCalls.js";
 import { Route, Switch, Link } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import Quote from "../Quote/Quote";
-import List from "../Options/Options";
+import Characters from "../Characters/Characters";
 import "./App.css";
 
 const App = () => {
@@ -41,12 +41,7 @@ const App = () => {
         <Route
           exact
           path="/heroes"
-          render={() => <List data={allCharacters} />}
-        />
-        <Route
-          exact
-          path="/wise-words"
-          render={() => <h1>You have not added quotes yet</h1>}
+          render={() => <Characters characters={allCharacters} />}
         />
       </Switch>
     </main>
