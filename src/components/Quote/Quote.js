@@ -7,6 +7,7 @@ const Quote = ({ allCharacters }) => {
   const [quotes, setQuotes] = useState([]);
   const [randomQuote, setRandomQuote] = useState("");
   const [loading, setLoading] = useState(false);
+  const [response, setResponse] = useState("");
 
   useEffect(() => {
     setLoading(true);
@@ -37,7 +38,7 @@ const Quote = ({ allCharacters }) => {
 
   return (
     <div className="quote-container">
-      {loading && <h2>Data is loading</h2>}
+      {loading && <h2>loading quote...</h2>}
       {quotes.length && (
         <div>
           <h2>Who said the words...</h2>
