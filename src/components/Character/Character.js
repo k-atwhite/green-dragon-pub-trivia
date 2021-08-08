@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const Character = ({ name, race, gender, realm, birth, wikiUrl }) => {
   return (
-    <div className="card" id={name}>
+    <div className="card character" id={name}>
       <p>{name}</p>
       <p>{race}</p>
       <p>{gender}</p>
