@@ -46,9 +46,14 @@ const App = () => {
           path="/heroes"
           render={() => <Characters characters={allCharacters} />}
         />
-        {/* <Route
-          exact path="/heroes/${name}"
-        /> */}
+        <Route
+          path='/heroes/:name' render={({match}) => {
+            const hero = allCharacters.find((character) => character._id === match.params.id
+            );
+
+            return <Characters character={hero} />
+          }}
+        />
       </Switch>
     </main>
   );
