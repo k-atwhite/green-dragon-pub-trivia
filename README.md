@@ -15,7 +15,7 @@
   
   
 
-## [View Our App Here!]()
+## [View the game here!](https://k-atwhite.github.io/green-dragon-pub-trivia/)
 
 <!-- <p align="center"><img src=GIF ></p>
  -->
