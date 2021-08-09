@@ -25,7 +25,7 @@ const CharacterQuotes = ({ hero }) => {
     return (
       <div>
         {error && <h2 classNmae="error-msg">{error}</h2>}
-        <h2>Words of: {hero.name}</h2>
+        <h2 className="words-of">The words of {hero.name}</h2>
         <div className="quote-cards-container">{quoteCards}</div>;
       </div>
     );
