@@ -4,3 +4,8 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
+
+.click-here {
+  color: white;
+  text-align: center;
+}

@@ -1,6 +1,14 @@
 .card {
   box-sizing: border-box;
-  border: 3px solid black;
+  border: .25px solid black;
   padding: 10px;
   background: url(../../resources/parchment.jpg);
+  font-size: 150%;
+  font-weight: bolder;
+
+}
+
+.card:hover {
+  transform: scale(1.05);
+ box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
