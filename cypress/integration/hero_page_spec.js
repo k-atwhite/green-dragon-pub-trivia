@@ -4,11 +4,11 @@ beforeEach(() => {
 
 describe("Hero Page", () => {
 
-  it("Should display cards of all 18 heroes", () => {
+  it("should display cards of all 18 heroes", () => {
     cy.get(".character").should("have.length", 18);
   });
 
-  it("Should include the characters name, race, sex, and realm", () => {
+  it("should include the characters name, race, sex, and realm", () => {
     cy.get(".card").first().should('include.text', 'Aragorn')
     .get(".card").first().should('include.text', 'Human')
     .get(".card").first().should('include.text', 'Male')

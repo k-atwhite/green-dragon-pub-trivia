@@ -1,24 +1,22 @@
 beforeEach(() => {
-  cy.fixture("mockCharacters").then((listData) => {
-    cy.intercept(
-      "https://the-one-api.dev/v2/character?name=Gandalf,Frodo Baggins,Aragorn II Elessar,Legolas,Arwen,Galadriel,Gimli,Boromir,Bilbo Baggins,Samwise Gamgee,Gollum,Saruman,Peregrin Took,Meriadoc Brandybuck,Elrond,Théoden,Faramir,Éowyn",
-      listData
-    );
-  });
+  //////// The Intercept I would have used if I could find out why cypress was ignoring it ///////
+
+  // cy.intercept('GET', `https://the-one-api.dev/v2/character?name=Gandalf,Frodo%20Baggins,Aragorn%20II%20Elessar,Legolas,Arwen,Galadriel,Gimli,Boromir,Bilbo%20Baggins,Samwise%20Gamgee,Gollum,Saruman,Peregrin%20Took,Meriadoc%20Brandybuck,Elrond,Théoden,Faramir,Éowyn`, 
+  //     { statusCode: 200, fixture: 'mockCharacter.json' }).as("character")
 
   cy.visit("http://localhost:3000/");
 });
 
 describe("Landing Page", () => {
-  it("A welcome message describing the app in a general manner", () => {
+  it("should have s welcome message describing the game", () => {
     cy.get(".entry-container").should("be.visible");
   });
 
-  it("The welcome message should have a link to the game", () => {
+  it("should have a link that takes user to the game", () => {
     cy.get(".link").should("be.visible");
   });
 
-  it("The link should take you to the trivia url", () => {
+  it("the link should take you to the trivia url", () => {
     cy.get(".link").click().url().should("include", "/trivia");
   });
 });

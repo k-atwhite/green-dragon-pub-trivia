@@ -5,7 +5,7 @@ beforeEach(() => {
 
 describe("Hero Quotes Page", () => {
 
-  it("Should display all quotes from selected Character", () => {
+  it("should display all quotes from selected Character", () => {
     cy.get(".quote-card").should("have.length", 214);
   });
 
