@@ -15,14 +15,16 @@
   
   
 
-## [View the game here!](https://k-atwhite.github.io/green-dragon-pub-trivia/)
-
-<!-- <p align="center"><img src=GIF ></p>
+<!-- ## [View the game here!](https://k-atwhite.github.io/green-dragon-pub-trivia/)
  -->
+<p align="center"><img src=https://media.giphy.com/media/ytLsgypRyRZkbMHxxD/giphy.gif ></p>
+
 <!-- <p align="center"><img src=RESPONSIVE
  ></p> -->
 
 <br>
+
+The Green Dragon is the oldest and most established pub in Hobbiton. Here in the peaceful Fourth Age, the Age of Man, hobbits from across the Shire flock to the Green Dragon to show off their knowledge of the old heroes. Come, pull up a chair, and test your skills. You will find a quote randomly pulled from a random hero. Click on your best guess and find out if you were right or wrong. If you find that you need to brush up on your memory of the hero's words - click on the Hero's tab in the navigation bar, choose your desired, and see all of their quotes displayed for your reading pleasure.
 
  
 ## Table of Contents
@@ -39,10 +41,6 @@
   </tr>
     <td><img src="https://avatars.githubusercontent.com/u/49215782?v=4" alt="Kat GH image" width="150" height="auto" /></td>
 </table>
-
-### Special Thanks to:
-<!-- - https://github.com/lkessell" -->
-
 
 ## Learning Goals
 
@@ -69,7 +67,7 @@ Open a window in your web browser of choice, and visit `localhost:3000` to view 
 
 There are so many ways to improve this site. Some major priorities include:
 
-1.
-2.
-3.
-4.
+1. Showing which movie specific quotes are from
+2. Having the option to save your favorite quotes
+3. A counter, to see how you many quotes you're getting right and how you're progressing. It would also be nice to be able to watch your stats over time.
+4. I would also like to have some nice Medieval music and tavern sounds in the background, with the option to mute. 
