@@ -67,3 +67,8 @@ h2 {
 		transform: scale(0.95);
 	}
 }
+
+.error-msg {
+  color: red;
+  background-color: white;
+}
