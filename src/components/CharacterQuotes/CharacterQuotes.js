@@ -11,7 +11,7 @@ const CharacterQuotes = ({ hero }) => {
     if (!quotes.length) {
       getCharacterQuotes(hero._id).then((data) => setQuotes(data.docs));
     }
-  }, [quotes]);
+  }, [quotes, hero._id]);
 
   if (!hero) {
     setError("We are having trouble loading quotes")
@@ -19,12 +19,12 @@ const CharacterQuotes = ({ hero }) => {
 
   if (quotes.length) {
     let quoteCards = quotes.map((quote) => {
-      return <QuoteCard dialog={quote.dialog} key={quote._id} />;
+      return <QuoteCard dialog={quote.dialog} id={quote._id} />;
     });
 
     return (
       <div>
-        {error && <h2 classNmae="error-msg">{error}</h2>}
+        {error && <h2 className="error-msg">{error}</h2>}
         <h2 className="words-of">The words of {hero.name}</h2>
         <div className="quote-cards-container">{quoteCards}</div>;
       </div>
