@@ -3,21 +3,21 @@ describe("Navigation Bar", () => {
      cy.visit("http://localhost:3000/");
   });
 
-    it("Should contain link to Home", () => {
+    it("should contain link to Home", () => {
       cy.get("nav")
         .contains("Home")
         .click()
         .url("http://localhost:3000/");
     });
 
-    it("Should contain link to Trivia", () => {
+    it("should contain link to Trivia", () => {
       cy.get("nav")
         .contains("Quote Trivia")
         .click()
         .url("http://localhost:3000/trivia");
     });
 
-        it("Should contain link to Heroes", () => {
+    it("should contain link to Heroes", () => {
       cy.get("nav")
         .contains("Heroes")
         .click()
