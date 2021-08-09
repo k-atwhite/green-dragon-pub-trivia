@@ -29,7 +29,7 @@ const App = () => {
               <h3 className="entry-text">Test your memory and honor our heros of the Third Age</h3>
               <h3 className="entry-text">best of luck to you!</h3>
               <Link className="link entry-text" to="/trivia">
-                Click to Begin
+                ...Begin...
               </Link>
               <Link to="/heroes" className=" link practice-text">Click Here to pratice...</Link>
             </div>
