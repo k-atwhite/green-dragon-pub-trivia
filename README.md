@@ -29,10 +29,10 @@ The Green Dragon is the oldest and most established pub in Hobbiton. Here in the
  
 ## Table of Contents
 
-- [Contributors](https://github.com/k-atwhite/backyard-burbs#contributors)
-- [Learning Goals](https://github.com/k-atwhite/backyard-burbs#learning-goals)
-- [How to use the app](https://github.com/k-atwhite/backyard-burbs#app-setup)
-- [Future Additions](https://github.com/k-atwhite/backyard-burbs#future-additions--reflections)
+- [Contributors](https://github.com/k-atwhite/green-dragon-pub-trivia/blob/main/README.md#contributor)
+- [Learning Goals](https://github.com/k-atwhite/green-dragon-pub-trivia/blob/main/README.md#learning-goals)
+- [How to use the app](https://github.com/k-atwhite/green-dragon-pub-trivia/blob/main/README.md#app-setup)
+- [Future Additions](https://github.com/k-atwhite/green-dragon-pub-trivia/blob/main/README.md#future-additions--reflections)
  
 ## Contributor
 <table>
