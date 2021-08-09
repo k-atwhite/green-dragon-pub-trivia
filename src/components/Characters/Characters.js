@@ -5,11 +5,8 @@ import "./Characters.css";
 
 const Characters = ({ characters }) => {
   const characterCards = characters.map((character) => {
-
     if (!characters.length) {
-      return (
-        <h2 className="error-msg">trouble loading characters...</h2>
-      )
+      return <h2 className="error-msg">trouble loading characters...</h2>;
     }
 
     return (
