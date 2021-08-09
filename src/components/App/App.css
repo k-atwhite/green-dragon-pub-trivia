@@ -6,11 +6,41 @@ main {
 }
 
 .entry-container {
-  margin-top: 10vw;
-  padding: 10vw;
+  margin-top: 5vw;
+  padding: 3vw;
   background: url(../../resources/parchment.jpg);
   display: flex;
   flex-direction: column;
   align-items: center;
   color: black;
+}
+
+h2 {
+  font-size: 300%;
+}
+
+.entry-text {
+  font-size: 250%
+}
+
+.practice-text {
+  margin-top: 2vw;
+  font-size: 150%
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+	text-shadow: none;
+	-webkit-transition: 500ms linear 0s;
+	-moz-transition: 500ms linear 0s;
+	-o-transition: 500ms linear 0s;
+	transition: 500ms linear 0s;
+	outline: 0 none;
+}
+
+.link:hover {
+  transform: scale(1.2);
+  color: #fff;
+	text-shadow: -1px 1px 8px black, 1px -1px 8px #fff;
 }

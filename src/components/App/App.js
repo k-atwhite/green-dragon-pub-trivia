@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllCharacters } from "../../apiCalls.js";
-import { Route, Switch, Link } from "react-router-dom";
+import { Route, Switch, Link, Redirect } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import Quote from "../Quote/Quote";
 import Characters from "../Characters/Characters";
@@ -25,13 +25,13 @@ const App = () => {
           path="/"
           render={() => (
             <div className="entry-container">
-              <p>Welcome to Trivia Night at the Green Dragon</p>
-              <p>Test your memory and honor our heros of the Third Age</p>
-              <p>best of luck to you</p>
-              <Link className="link" to="/trivia">
-                Begin
+              <h2><span><img src="https://img.icons8.com/color/48/000000/european-dragon.png"/></span>Welcome to Trivia at the Green Dragon<span><img src="https://img.icons8.com/color/48/000000/european-dragon.png"/></span></h2>
+              <h3 className="entry-text">Test your memory and honor our heros of the Third Age</h3>
+              <h3 className="entry-text">best of luck to you!</h3>
+              <Link className="link entry-text" to="/trivia">
+                Click to Begin
               </Link>
-              <Link to="/heroes">If you need to practice...</Link>
+              <Link to="/heroes" className=" link practice-text">Click Here to pratice...</Link>
             </div>
           )}
         />
@@ -58,6 +58,7 @@ const App = () => {
           }}
         />
       </Switch>
+      <Redirect to={"/"} />
     </main>
   );
 };
