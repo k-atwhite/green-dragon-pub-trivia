@@ -9,12 +9,12 @@ const Character = ({ name, race, gender, realm, birth }) => {
   }
   return (
     <Link to={`/heroes/${name}`}>
-      <div className="card character" id={name}>
-        <p>{name}</p>
-        <p>{race}</p>
-        <p>{gender}</p>
-        <p>{realm}</p>
-        <p>{birth}</p>
+      <div className="character" id={name}>
+        <p className="name">{name}</p>
+        {race && <p>race: {race}</p>}
+        {gender && <p>gender: {gender}</p>}
+        {realm && <p>realm: {realm}</p>}
+        {birth && <p>birth: {birth}</p>}
       </div>
     </Link>
   );
