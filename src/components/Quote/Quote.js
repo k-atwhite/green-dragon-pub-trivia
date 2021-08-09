@@ -37,7 +37,7 @@ const Quote = ({ allCharacters }) => {
     if (quotes.length && !randomQuote) {
       setRandomQuote(quotes[0]["dialog"]);
     }
-  }, [quotes]);
+  }, [quotes, randomQuote]);
 
   const validateAnswer = (id) => {
     if (id === character.name) {

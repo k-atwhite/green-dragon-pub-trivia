@@ -18,7 +18,6 @@ const Characters = ({ characters }) => {
         gender={character.gender}
         realm={character.realm}
         birthday={character.birth}
-        wikiUrl={character.wikiUrl}
       ></Character>
     );
   });
