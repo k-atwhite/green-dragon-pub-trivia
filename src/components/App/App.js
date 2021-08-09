@@ -28,7 +28,7 @@ const App = () => {
               <h2><span><img src="https://img.icons8.com/color/48/000000/european-dragon.png"/></span>Welcome to Trivia at the Green Dragon<span><img src="https://img.icons8.com/color/48/000000/european-dragon.png"/></span></h2>
               <h3 className="entry-text">Test your memory and honor our heros of the Third Age</h3>
               <h3 className="entry-text">best of luck to you!</h3>
-              <Link className="link entry-text" to="/trivia">
+              <Link className="link entry-text begin" to="/trivia">
                 ...Begin...
               </Link>
               <Link to="/heroes" className=" link practice-text">Click Here to pratice...</Link>
