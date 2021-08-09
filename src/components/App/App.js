@@ -4,6 +4,7 @@ import { Route, Switch, Link } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import Quote from "../Quote/Quote";
 import Characters from "../Characters/Characters";
+import CharacterQuotes from "../CharacterQuotes/CharacterQuotes";
 import "./App.css";
 
 const App = () => {
@@ -30,16 +31,14 @@ const App = () => {
               <Link className="link" to="/trivia">
                 Begin
               </Link>
-              {/* <Link to="/heroes">If you need to practice</Link> */}
+              <Link to="/heroes">If you need to practice...</Link>
             </div>
           )}
         />
         <Route
           exact
           path="/trivia"
-          render={() => (
-              <Quote allCharacters={allCharacters} />
-          )}
+          render={() => <Quote allCharacters={allCharacters} />}
         />
         <Route
           exact
@@ -47,13 +46,15 @@ const App = () => {
           render={() => <Characters characters={allCharacters} />}
         />
         <Route
-          path='/heroes/:name' render={({match}) => {
-            console.log(match)
-            const hero = allCharacters.find((character) => character.name === match.params.name
+          path="/heroes/:name"
+          render={({ match }) => {
+            console.log(match);
+            const hero = allCharacters.find(
+              (character) => character.name === match.params.name
             );
-            console.log(hero)
+            console.log(hero);
 
-            return <Characters characters={hero} />
+            return <CharacterQuotes hero={hero} />;
           }}
         />
       </Switch>
