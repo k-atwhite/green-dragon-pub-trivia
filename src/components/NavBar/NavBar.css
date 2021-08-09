@@ -14,6 +14,7 @@ nav {
 	-o-transition: 500ms linear 0s;
 	transition: 500ms linear 0s;
 	outline: 0 none;
+  font-size: 170%;
 }
 
 .nav-link:hover {
