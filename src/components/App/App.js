@@ -48,10 +48,12 @@ const App = () => {
         />
         <Route
           path='/heroes/:name' render={({match}) => {
-            const hero = allCharacters.find((character) => character._id === match.params.id
+            console.log(match)
+            const hero = allCharacters.find((character) => character.name === match.params.name
             );
+            console.log(hero)
 
-            return <Characters character={hero} />
+            return <Characters characters={hero} />
           }}
         />
       </Switch>
