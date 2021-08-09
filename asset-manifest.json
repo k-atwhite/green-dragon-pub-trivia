@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/green-dragon-pub-trivia/static/css/main.3a325938.chunk.css",
+    "main.js": "/green-dragon-pub-trivia/static/js/main.401f63cd.chunk.js",
+    "main.js.map": "/green-dragon-pub-trivia/static/js/main.401f63cd.chunk.js.map",
+    "runtime-main.js": "/green-dragon-pub-trivia/static/js/runtime-main.67f4e9ef.js",
+    "runtime-main.js.map": "/green-dragon-pub-trivia/static/js/runtime-main.67f4e9ef.js.map",
+    "static/js/2.bfd237d6.chunk.js": "/green-dragon-pub-trivia/static/js/2.bfd237d6.chunk.js",
+    "static/js/2.bfd237d6.chunk.js.map": "/green-dragon-pub-trivia/static/js/2.bfd237d6.chunk.js.map",
+    "static/js/3.0d048eeb.chunk.js": "/green-dragon-pub-trivia/static/js/3.0d048eeb.chunk.js",
+    "static/js/3.0d048eeb.chunk.js.map": "/green-dragon-pub-trivia/static/js/3.0d048eeb.chunk.js.map",
+    "index.html": "/green-dragon-pub-trivia/index.html",
+    "static/css/main.3a325938.chunk.css.map": "/green-dragon-pub-trivia/static/css/main.3a325938.chunk.css.map",
+    "static/js/2.bfd237d6.chunk.js.LICENSE.txt": "/green-dragon-pub-trivia/static/js/2.bfd237d6.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/green-dragon-pub-trivia/static/media/background-image.4b832557.jpg",
+    "static/media/App.css": "/green-dragon-pub-trivia/static/media/parchment.80157591.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.67f4e9ef.js",
+    "static/js/2.bfd237d6.chunk.js",
+    "static/css/main.3a325938.chunk.css",
+    "static/js/main.401f63cd.chunk.js"
+  ]
+}
