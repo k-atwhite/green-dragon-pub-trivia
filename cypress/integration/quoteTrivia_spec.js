@@ -7,7 +7,7 @@ describe("Trivia Page", () => {
   //   .intercept('GET', 'https://the-one-api.dev/v2/character/5cdbdecb6dc0baeae48cfa59/quote', 
   //     { statusCode: 200, fixture: 'mockQuotes.json' })
 
-  cy.visit("http://localhost:3000").get(".link").click()
+  cy.visit("http://localhost:3000").get(".begin").click()
   });
 
   it("should show a loading message while data loads", () => {
