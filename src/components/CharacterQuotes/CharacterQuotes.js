@@ -14,7 +14,7 @@ const CharacterQuotes = ({ hero }) => {
   }, [quotes, hero._id]);
 
   if (!hero) {
-    setError("We are having trouble loading quotes")
+    setError("We are having trouble loading quotes");
   }
 
   if (quotes.length) {

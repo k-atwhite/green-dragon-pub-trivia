@@ -10,7 +10,7 @@ const Characters = ({ characters }) => {
     }
 
     return (
-        <Character
+      <Character
         key={character._id}
         id={character._id}
         name={character.name}
@@ -25,12 +25,9 @@ const Characters = ({ characters }) => {
   return (
     <div>
       <h2 className="click-here">Click a hero to see all their words</h2>
-      <div className="characters-container">
-        {characterCards}
-      </div>
+      <div className="characters-container">{characterCards}</div>
     </div>
-
-  )
+  );
 };
 
 export default Characters;
