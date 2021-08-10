@@ -17,6 +17,14 @@ describe("Landing Page", () => {
   });
 
   it("the link should take you to the trivia url", () => {
-    cy.get(".link").click().url().should("include", "/trivia");
+    cy.get(".begin").click().url().should("include", "/trivia");
+  });
+
+  it("Should have a link that takes user to all heroes", () => {
+    cy.get(".practice-text").should("be.visible");
+  });
+
+    it("It should take user to see all heroes", () => {
+    cy.get(".practice-text").click().url().should("include", "/heroes");
   });
 });
