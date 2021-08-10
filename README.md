@@ -32,6 +32,7 @@ The Green Dragon is the oldest and most established pub in Hobbiton. Here in the
 - [Contributors](https://github.com/k-atwhite/green-dragon-pub-trivia/blob/main/README.md#contributor)
 - [Learning Goals](https://github.com/k-atwhite/green-dragon-pub-trivia/blob/main/README.md#learning-goals)
 - [How to use the app](https://github.com/k-atwhite/green-dragon-pub-trivia/blob/main/README.md#app-setup)
+- [Reflections](https://github.com/k-atwhite/green-dragon-pub-trivia/blob/main/README.md#reflections)
 - [Future Additions](https://github.com/k-atwhite/green-dragon-pub-trivia/blob/main/README.md#future-additions--reflections)
  
 ## Contributor
@@ -63,7 +64,12 @@ In the new Terminal window, run the following commands:
 
 Open a window in your web browser of choice, and visit `localhost:3000` to view the app!
 
-## Future Additions & Reflections
+## Reflections
+Understanding my API really threw me for a loop for a couple days while working on this project. I genuinely struggled with asynchronous calls and issues. I would see that my state was **right there** in my dev tools.I could SEE it, but I couldn't use it or render it. I know what is really going on in useEffect now, and I know how to separate my functions better. I also know the power of conditional rendering in a way I didn't previously understand. In the process of learning why this was happening, what I could do about it, and general better practices, I feel I went through async hell and came out the other side.
+
+As with all projects, I wish I knew then what I know now.
+
+## Future Additions
 
 There are so many ways to improve this site. Some major priorities include:
 
