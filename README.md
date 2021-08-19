@@ -15,8 +15,7 @@
   
   
 
-<!-- ## [View the game here!](https://k-atwhite.github.io/green-dragon-pub-trivia/)
- -->
+## [View the game here!](http://k-atwhite.github.io/green-dragon-pub-trivia/)
 <p align="center"><img src=https://media.giphy.com/media/ytLsgypRyRZkbMHxxD/giphy.gif ></p>
 
 <!-- <p align="center"><img src=RESPONSIVE
