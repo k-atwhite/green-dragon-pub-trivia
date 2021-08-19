@@ -1,5 +1,6 @@
 {
   "name": "lotr-quote-game",
+  "homepage": "http://k-atwhite.github.io/green-dragon-pub-trivia",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

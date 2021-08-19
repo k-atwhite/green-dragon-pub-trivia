@@ -73,6 +73,7 @@ const App = () => {
           }}
         />
       </Switch>
+      <Redirect to={"/"} />
     </main>
   );
 };
