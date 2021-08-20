@@ -59,6 +59,7 @@ const Quote = ({ allCharacters }) => {
           {!response && <h2 className="who">Who said the words...</h2>}
           {response && <h2 className="response">{response}</h2>}
           <h2 className="quote-text">{randomQuote}</h2>
+          <button className="randomize-btn">new quote</button>
           <div className="character-guesses">
             <Options
               data={allCharacters}
