@@ -73,7 +73,7 @@ const App = () => {
           }}
         />
       </Switch>
-      <Redirect to={"/trivia"} />
+      {/* <Redirect to={"/"} /> */}
     </main>
   );
 };

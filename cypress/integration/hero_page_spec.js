@@ -1,8 +1,9 @@
-beforeEach(() => {
-  cy.visit("http://localhost:3000").get(".heroes").click();
-});
-
 describe("Hero Page", () => {
+
+  beforeEach(() => {
+    cy.visit("http://localhost:3000").get(".heroes").click();
+  });
+
 
   it("should display cards of all 18 heroes", () => {
     cy.get(".character").should("have.length", 18);

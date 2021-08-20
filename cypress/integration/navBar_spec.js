@@ -1,4 +1,5 @@
 describe("Navigation Bar", () => {
+  
   beforeEach(() => {
      cy.visit("http://localhost:3000/");
   });
