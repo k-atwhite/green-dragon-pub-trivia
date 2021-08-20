@@ -5,7 +5,7 @@ orbs:
   cypress: cypress-io/cypress@1
 
 workflows:
-  sample:
+  build:
     jobs:
       - cypress/run:
           start: npm start
