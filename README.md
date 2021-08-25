@@ -23,7 +23,7 @@
 
 <br>
 
-The Green Dragon is the oldest and most established pub in Hobbiton. Here in the peaceful Fourth Age, the Age of Man, hobbits from across the Shire flock to the Green Dragon to show off their knowledge of the old heroes. Come, pull up a chair, and test your skills. You will find a quote randomly pulled from a random hero. Click on your best guess and find out if you were right or wrong. If you find that you need to brush up on your memory of the hero's words - click on the Hero's tab in the navigation bar, choose your desired, and see all of their quotes displayed for your reading pleasure.
+The Green Dragon is the oldest and most established pub in Hobbiton. Here in the peaceful Fourth Age, the Age of Man, hobbits from across the Shire flock to the Green Dragon to show off their knowledge of the old heroes. Come, pull up a chair, and test your skills. You will find a quote randomly pulled from a random hero. Click on your best guess and find out if you were right or wrong. If you find that you need to brush up on your memory of the hero's words - click on the Hero's tab in the navigation bar, choose your desired hero, and see all of their quotes displayed for your reading pleasure.
 
  
 ## Table of Contents
