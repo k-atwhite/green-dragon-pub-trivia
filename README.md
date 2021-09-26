@@ -23,7 +23,7 @@
 
 <br>
 
-The Green Dragon is the oldest and most established pub in Hobbiton. Here in the peaceful Fourth Age, the Age of Man, hobbits from across the Shire flock to the Green Dragon to show off their knowledge of the old heroes. Come, pull up a chair, and test your skills. You will find a quote randomly pulled from a random hero. Click on your best guess and find out if you were right or wrong. If you find that you need to brush up on your memory of the hero's words - click on the Hero's tab in the navigation bar, choose your desired, and see all of their quotes displayed for your reading pleasure.
+The Green Dragon is the oldest and most established pub in Hobbiton. Here in the peaceful Fourth Age, the Age of Man, hobbits from across the Shire flock to the Green Dragon to show off their knowledge of the old heroes. Come, pull up a chair, and test your skills. You will find a quote randomly pulled from a random hero. Click on your best guess and find out if you were right or wrong. If you find that you need to brush up on your memory of the hero's words - click on the Hero's tab in the navigation bar, choose your desired hero, and see all of their quotes displayed for your reading pleasure.
 
  
 ## Table of Contents
@@ -64,7 +64,9 @@ In the new Terminal window, run the following commands:
 Open a window in your web browser of choice, and visit `localhost:3000` to view the app!
 
 ## Reflections
-Understanding my API really threw me for a loop for a couple days while working on this project. I genuinely struggled with asynchronous calls and issues. I would see that my state was **right there** in my dev tools.I could SEE it, but I couldn't use it or render it. I know what is really going on in useEffect now, and I know how to separate my functions better. I also know the power of conditional rendering in a way I didn't previously understand. In the process of learning why this was happening, what I could do about it, and general better practices, I feel I went through async hell and came out the other side.
+Understanding my API really threw me for a loop for a couple days while working on this project. I genuinely struggled with asynchronous calls and issues. I would see that my state was **right there** in my dev tools. I could SEE it, but I couldn't use it or render it. 
+
+I know what is really going on in useEffect now, and I know how to separate my functions better. I also know the power of conditional rendering in a way I didn't previously understand. In the process of learning why this was happening, what I could do about it, and general better practices, I feel I went through async hell and came out the other side.
 
 As with all projects, I wish I knew then what I know now.
 
