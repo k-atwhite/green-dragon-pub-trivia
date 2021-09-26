@@ -1,6 +1,6 @@
-import React from "react";
-import "./NavBar.css";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import './NavBar.css';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -9,7 +9,7 @@ const NavBar = () => {
         Home
       </NavLink>
       <NavLink exact to="/trivia" className="nav-link trivia">
-        Quote Trivia
+        Trivia
       </NavLink>
       <NavLink exact to="/heroes" className="nav-link heroes">
         Heroes

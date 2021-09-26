@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
-import { getAllCharacters } from "../../apiCalls.js";
-import { Route, Switch, Link, Redirect } from "react-router-dom";
-import NavBar from "../NavBar/NavBar";
-import Quote from "../Quote/Quote";
-import Characters from "../Characters/Characters";
-import CharacterQuotes from "../CharacterQuotes/CharacterQuotes";
-import "./App.css";
+import { useEffect, useState } from 'react';
+import { getAllCharacters } from '../../apiCalls.js';
+import { Route, Switch, Link, Redirect } from 'react-router-dom';
+import NavBar from '../NavBar/NavBar';
+import Quote from '../Quote/Quote';
+import Characters from '../Characters/Characters';
+import CharacterQuotes from '../CharacterQuotes/CharacterQuotes';
+import './App.css';
+import greenDragon from '../../../src/resources/green-dragon.png';
 
 const App = () => {
   const [allCharacters, setAllCharacters] = useState([]);
@@ -26,18 +27,9 @@ const App = () => {
           render={() => (
             <div className="entry-container">
               <h2>
-                <span>
-                  <img
-                    src="https://img.icons8.com/color/48/000000/european-dragon.png"
-                    alt="dragon-icon"
-                  />
-                </span>
                 Welcome to Trivia at the Green Dragon
                 <span>
-                  <img
-                    src="https://img.icons8.com/color/48/000000/european-dragon.png"
-                    alt="dragon-icon"
-                  />
+                  <img src={greenDragon} alt="dragon-icon" />
                 </span>
               </h2>
               <h3 className="entry-text">
