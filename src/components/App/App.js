@@ -65,7 +65,7 @@ const App = () => {
           }}
         />
       </Switch>
-      {/* <Redirect to={"/"} /> */}
+      {/* <Redirect to={'/'} /> */}
     </main>
   );
 };
