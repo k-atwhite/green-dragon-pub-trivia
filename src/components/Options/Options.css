@@ -7,22 +7,19 @@
 }
 
 .who {
-  font-size: 225%;
+  font-size: 150%;
 }
 
 .quote-container {
-  width: 95vw;
+  width: 90vw;
 }
 
 .quote-text {
-  font-size: 175%;
+  font-size: 150%;
 }
 
 .response {
-  font-size: 225%;
-}
-
-@media screen and (min-width: 768px) {
+  font-size: 150%;
 }
 
 @media screen and (min-width: 1200px) {
