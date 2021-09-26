@@ -23,7 +23,7 @@ const App = () => {
       <Switch>
         <Route
           exact
-          path="/"
+          path="/home"
           render={() => (
             <div className="entry-container">
               <h2>
