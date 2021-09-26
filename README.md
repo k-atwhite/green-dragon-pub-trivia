@@ -15,7 +15,7 @@
   
   
 
-## [View the game here!](https://green-dragon-pub-trivia.herokuapp.com/trivia)
+## [View the game here!](https://green-dragon-pub-trivia.herokuapp.com/)
 <p align="center"><img src=https://media.giphy.com/media/ytLsgypRyRZkbMHxxD/giphy.gif ></p>
 
 <!-- <p align="center"><img src=RESPONSIVE
