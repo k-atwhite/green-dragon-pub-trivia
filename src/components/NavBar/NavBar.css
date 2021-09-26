@@ -22,8 +22,8 @@ nav {
   text-shadow: -1px 1px 8px goldenrod, 1px -1px 8px #fff;
 }
 
-@media screen and (min-width: 768px) {
-}
-
 @media screen and (min-width: 1200px) {
+  .nav-link {
+    font-size: 250%;
+  }
 }

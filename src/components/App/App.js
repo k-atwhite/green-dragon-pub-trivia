@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getAllCharacters } from '../../apiCalls.js';
-import { Route, Switch, Link, Redirect } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import Quote from '../Quote/Quote';
 import Characters from '../Characters/Characters';
@@ -65,7 +65,6 @@ const App = () => {
           }}
         />
       </Switch>
-      {/* <Redirect to={'/'} /> */}
     </main>
   );
 };

@@ -86,7 +86,43 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  h2 {
+    font-size: 500%;
+  }
+  .entry-text {
+    font-size: 300%;
+  }
+
+  .practice-text {
+    font-size: 200%;
+  }
+
+  img {
+    height: 35vw;
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 400%;
+    margin-top: 1vw;
+    margin-bottom: 0;
+  }
+  .entry-text {
+    font-size: 200%;
+    margin: 1vw;
+    padding-top: 0;
+  }
+
+  .practice-text {
+    font-size: 200%;
+  }
+
+  img {
+    height: 15vw;
+  }
+
+  .entry-container {
+    margin-top: 1.5vw;
+  }
 }
